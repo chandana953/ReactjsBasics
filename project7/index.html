@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <button id="btnChangeColor">Click me</button>
+    <p id="colorText"></p>
+    
+    <script>
+        document.getElementById("btnChangeColor").addEventListener("click", function () {
+            // Convert random number to a valid hex string, like "#ff0088"
+            let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+            
+            // Set the background using the valid hex color
+            document.body.style.backgroundColor = randomColor;
+            
+            // Update the paragraph text
+            document.getElementById("colorText").innerText = randomColor;
+        });
+       
+    </script>
+    
+</body>
+
+</html>
